@@ -10,6 +10,8 @@ def roman(number):
         return "III"
     elif number == 4:
         return "IV"
+    elif number == 5:
+        return "V"
 
 
 class RomanNumeralsTest(unittest.TestCase):

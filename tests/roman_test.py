@@ -2,11 +2,12 @@ import unittest
 
 
 def roman(number):
-    pass
+    if number == 1:
+        return "I"
 
 
 class RomanNumeralsTest(unittest.TestCase):
-    
+
     def test_1_is_a_single_i(self):
         self.assertEqual(roman(1), "I")
 

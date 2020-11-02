@@ -4,6 +4,8 @@ import unittest
 def roman(number):
     if number == 1:
         return "I"
+    elif number == 2:
+        return "II"
 
 
 class RomanNumeralsTest(unittest.TestCase):

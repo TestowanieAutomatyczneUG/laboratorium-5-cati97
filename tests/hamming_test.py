@@ -14,9 +14,8 @@ class HammingTest(unittest.TestCase):
     def test_empty_strands(self):
         self.assertEqual(self.hamming.distance("", ""), 0)
 
-    @unittest.skip("testing one thing at once")
     def test_single_letter_identical_strands(self):
-        self.assertEqual(hamming.distance("A", "A"), 0)
+        self.assertEqual(self.hamming.distance("A", "A"), 0)
 
     @unittest.skip
     def test_single_letter_different_strands(self):

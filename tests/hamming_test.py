@@ -1,12 +1,20 @@
 import unittest
+from src.Hamming import Hamming
 
 
 class HammingTest(unittest.TestCase):
 
-    def test_empty_strands(self):
-        self.assertEqual(hamming.distance("", ""), 0)
+    def setUp(self):
+        self.hamming = Hamming()
+        try:
+            self.assertRaisesRegex
+        except AttributeError:
+            self.assertRaisesRegex = self.assertRaisesRegexp
 
-    @unittest.skip("testing one thing at one")
+    def test_empty_strands(self):
+        self.assertEqual(self.hamming.distance("", ""), 0)
+
+    @unittest.skip("testing one thing at once")
     def test_single_letter_identical_strands(self):
         self.assertEqual(hamming.distance("A", "A"), 0)
 
@@ -41,13 +49,6 @@ class HammingTest(unittest.TestCase):
     def test_disallow_right_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
             hamming.distance("G", "")
-
-    # Utility functions
-    def setUp(self):
-        try:
-            self.assertRaisesRegex
-        except AttributeError:
-            self.assertRaisesRegex = self.assertRaisesRegexp
 
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")

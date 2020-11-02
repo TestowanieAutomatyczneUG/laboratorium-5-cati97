@@ -4,3 +4,5 @@ class Hamming:
             return 0
         elif first == second:
             return 0
+        else:
+            return 1

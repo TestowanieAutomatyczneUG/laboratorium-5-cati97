@@ -21,7 +21,7 @@ class HammingTest(unittest.TestCase):
         self.assertEqual(self.hamming.distance("G", "T"), 1)
 
     def test_long_identical_strands(self):
-        self.assertEqual(hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
+        self.assertEqual(self.hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
     @unittest.skip
     def test_long_different_strands(self):

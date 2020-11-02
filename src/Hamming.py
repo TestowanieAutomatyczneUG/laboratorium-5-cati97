@@ -5,4 +5,10 @@ class Hamming:
         elif first == second:
             return 0
         else:
-            return 1
+            countDiff = 0
+            for i in range(len(first)):
+                if first[i] != second[i]:
+                    countDiff += 1
+                else:
+                    continue
+            return countDiff

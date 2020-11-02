@@ -2,6 +2,8 @@ class Hamming:
     def distance(self, first, second):
         if len(first) > len(second):
             raise ValueError("First strand cannot be longer!")
+        elif len(second) > len(first):
+            raise ValueError("Second strand cannot be longer!")
         else:
             if first == "" and second == "":
                 return 0

@@ -1,23 +1,12 @@
 class Hamming:
     def distance(self, first, second):
-        if len(first) == "":
-            raise ValueError("First strand cannot be empty!")
-        elif len(second) == "":
-            raise ValueError("Second stand cannot be empty!")
-        elif len(first) > len(second):
-            raise ValueError("First strand cannot be longer!")
-        elif len(second) > len(first):
-            raise ValueError("Second strand cannot be longer!")
+        if len(first) == len(second):
+            count_diff = 0
+            for i in range(len(first)):
+                if first[i] != second[i]:
+                    count_diff += 1
+                else:
+                    continue
+            return count_diff
         else:
-            if first == "" and second == "":
-                return 0
-            elif first == second:
-                return 0
-            else:
-                countDiff = 0
-                for i in range(len(first)):
-                    if first[i] != second[i]:
-                        countDiff += 1
-                    else:
-                        continue
-                return countDiff
+            raise ValueError("Strands must have the same length")

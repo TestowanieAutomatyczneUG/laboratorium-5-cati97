@@ -4,6 +4,8 @@ class Hamming:
             raise ValueError("First strand cannot be longer!")
         elif len(second) > len(first):
             raise ValueError("Second strand cannot be longer!")
+        elif len(first) == "":
+            raise ValueError("First strand cannot be empty!")
         else:
             if first == "" and second == "":
                 return 0

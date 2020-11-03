@@ -19,6 +19,10 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.get_nth_line(14)
 
+    def test_line_number_out_in_range_negative_num(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.song.get_nth_line(-2)
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 

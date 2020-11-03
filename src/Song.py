@@ -11,30 +11,11 @@ class Song:
         else:
             raise ValueError("Line number not in range!")
 
-    def get_start_end_lines(self, start, end): # np. 1, 3
+    def get_start_end_lines(self, start, end):
         """
         both ends included
-        # """
+        """
         return "\n\n".join(self.lines[start-1:end])
 
     def get_whole_song(self):
         pass
-
-#
-# song = Song("song.txt")
-# print(len(song.lines))
-#
-# one_to_three = """On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
-#
-# On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.
-#
-# On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."""
-#
-# # one_to_three = [
-# #     "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.",
-# #     "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.",
-# #     "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."
-# # ]
-# # one_to_three_str = "\n\n".join(one_to_three)
-#
-# print(one_to_three)

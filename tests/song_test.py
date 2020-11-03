@@ -31,14 +31,27 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.get_nth_line(2.5)
 
-    def test_get_start_end_lines(self):
+    def test_get_start_end_lines_1_to_3(self):
 
         one_to_three = """On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
 
 On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.
 
 On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."""
+
         self.assertEqual(self.song.get_start_end_lines(1, 3), one_to_three)
+
+    def test_get_start_end_lines_6_to_9(self):
+
+        six_to_nine = """On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
+
+On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
+
+On the eighth day of Christmas my true love gave to me: eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
+
+On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."""
+
+        self.assertEqual(self.song.get_start_end_lines(6, 9), six_to_nine)
 
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")

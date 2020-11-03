@@ -19,6 +19,8 @@ class Song:
             raise ValueError("Start value not in range")
         elif end not in range(1, len(self.lines)+1):
             raise ValueError("End value not in range")
+        elif start >= end:
+            raise ValueError("First value must be lower than second")
         else:
             return "\n\n".join(self.lines[start-1:end])
 

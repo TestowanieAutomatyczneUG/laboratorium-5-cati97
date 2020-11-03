@@ -11,7 +11,6 @@ class Song:
         elif n == 3:
             return self.lines[2]
 
-
     def get_start_end_lines(self, start, end):
         """
         both ends included
@@ -22,3 +21,5 @@ class Song:
         pass
 
 
+# song = Song("song.txt")
+# print(len(song.lines))

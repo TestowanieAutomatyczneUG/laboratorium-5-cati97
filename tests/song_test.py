@@ -12,6 +12,9 @@ class SongTest(unittest.TestCase):
     def test_get_nth_line_third_line(self):
         self.assertEqual(self.song.get_nth_line(3), "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
 
+    def test_get_last_line(self):
+        self.assertEqual(self.song.get_nth_line(12), "On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
+
     def tearDown(self):
         self.song = None
 

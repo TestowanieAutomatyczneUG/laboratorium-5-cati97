@@ -7,12 +7,7 @@ class Song:
 
     def get_nth_line(self, n):
         if n in range(0, len(self.lines)+1):
-            if n == 1:
-                return self.lines[0]
-            elif n == 3:
-                return self.lines[2]
-            elif n == 12:
-                return self.lines[11]
+            return self.lines[n-1]
         else:
             raise ValueError("Line number not in range!")
 

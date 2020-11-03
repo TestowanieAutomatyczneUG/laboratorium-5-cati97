@@ -50,7 +50,6 @@ class RomanNumeralsTest(unittest.TestCase):
     def test_48_is_not_50_2_but_rather_40_8(self):
         self.assertEqual(roman(48), "XLVIII")
 
-    @unittest.skip
     def test_49_is_not_40_5_4_but_rather_50_10_10_1(self):
         self.assertEqual(roman(49), "XLIX")
 

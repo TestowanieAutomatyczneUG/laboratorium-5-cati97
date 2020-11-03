@@ -25,4 +25,4 @@ class Song:
             return "\n\n".join(self.lines[start-1:end])
 
     def get_whole_song(self):
-        pass
+        return "\n\n".join(self.lines)

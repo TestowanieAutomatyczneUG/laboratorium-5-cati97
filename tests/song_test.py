@@ -27,6 +27,10 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.get_nth_line("second")
 
+    def test_line_number_is_a_float(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.song.get_nth_line(2.5)
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 

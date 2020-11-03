@@ -53,6 +53,10 @@ On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eigh
 
         self.assertEqual(self.song.get_start_end_lines(6, 9), six_to_nine)
 
+    def test_get_start_end_lines_first_number_out_of_range(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.song.get_start_end_lines(-2, 5)
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 

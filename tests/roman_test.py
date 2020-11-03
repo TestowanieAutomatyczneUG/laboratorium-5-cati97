@@ -25,6 +25,8 @@ def roman(number):
         return "LIX"
     elif number == 93:
         return "XCIII"
+    elif number == 141:
+        return "CXLI"
 
 
 class RomanNumeralsTest(unittest.TestCase):

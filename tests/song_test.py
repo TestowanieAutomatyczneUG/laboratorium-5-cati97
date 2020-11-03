@@ -31,6 +31,15 @@ class SongTest(unittest.TestCase):
         with self.assertRaisesWithMessage(ValueError):
             self.song.get_nth_line(2.5)
 
+    def test_get_start_end_lines(self):
+
+        one_to_three = """On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
+
+On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.
+
+On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree."""
+        self.assertEqual(self.song.get_start_end_lines(1, 3), one_to_three)
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 

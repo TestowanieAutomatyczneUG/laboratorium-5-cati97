@@ -61,6 +61,10 @@ On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eigh
         with self.assertRaisesWithMessage(ValueError):
             self.song.get_start_end_lines(2, 15)
 
+    def test_get_start_end_lines_second_smaller(self):
+        with self.assertRaisesWithMessage(ValueError):
+            self.song.get_start_end_lines(5, 2)
+
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 

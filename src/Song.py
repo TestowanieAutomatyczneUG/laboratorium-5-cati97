@@ -6,7 +6,8 @@ class Song:
             self.lines = lines
 
     def get_nth_line(self, n):
-        pass
+        if n == 1:
+            return self.lines[0]
 
     def get_start_end_lines(self, start, end):
         """

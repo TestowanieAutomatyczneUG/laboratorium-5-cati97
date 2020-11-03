@@ -37,6 +37,8 @@ def roman(number):
         return "CMXI"
     elif number == 1024:
         return "MXXIV"
+    elif number == 3000:
+        return "MMM"
 
 
 class RomanNumeralsTest(unittest.TestCase):

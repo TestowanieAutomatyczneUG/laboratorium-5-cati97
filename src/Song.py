@@ -15,7 +15,10 @@ class Song:
         """
         both ends included
         """
-        return "\n\n".join(self.lines[start-1:end])
+        if start not in range(0, len(self.lines)+1):
+            raise ValueError("Start value not in range")
+        else:
+            return "\n\n".join(self.lines[start-1:end])
 
     def get_whole_song(self):
         pass

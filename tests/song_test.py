@@ -9,6 +9,9 @@ class SongTest(unittest.TestCase):
     def test_get_nth_line(self):
         self.assertEqual(self.song.get_nth_line(1), "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.")
 
+    def test_get_nth_line_third_line(self):
+        self.assertEqual(self.song.get_nth_line(3), "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.")
+
     def tearDown(self):
         self.song = None
 

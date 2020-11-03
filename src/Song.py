@@ -9,6 +9,7 @@ class Song:
         if n == 1:
             return self.lines[0]
 
+
     def get_start_end_lines(self, start, end):
         """
         both ends included

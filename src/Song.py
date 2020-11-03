@@ -8,6 +8,8 @@ class Song:
     def get_nth_line(self, n):
         if n == 1:
             return self.lines[0]
+        elif n == 3:
+            return self.lines[2]
 
 
     def get_start_end_lines(self, start, end):

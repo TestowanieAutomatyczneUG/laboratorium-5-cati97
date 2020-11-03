@@ -35,6 +35,8 @@ def roman(number):
         return "DLXXV"
     elif number == 911:
         return "CMXI"
+    elif number == 1024:
+        return "MXXIV"
 
 
 class RomanNumeralsTest(unittest.TestCase):

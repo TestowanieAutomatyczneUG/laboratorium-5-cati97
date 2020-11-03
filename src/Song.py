@@ -10,6 +10,8 @@ class Song:
             return self.lines[0]
         elif n == 3:
             return self.lines[2]
+        elif n == 12:
+            return self.lines[11]
 
     def get_start_end_lines(self, start, end):
         """

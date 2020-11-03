@@ -6,7 +6,7 @@ class Song:
             self.lines = lines
 
     def get_nth_line(self, n):
-        if n in range(0, len(self.lines)+1):
+        if n in range(1, len(self.lines)+1):
             return self.lines[n-1]
         else:
             raise ValueError("Line number not in range!")
@@ -15,8 +15,10 @@ class Song:
         """
         both ends included
         """
-        if start not in range(0, len(self.lines)+1):
+        if start not in range(1, len(self.lines)+1):
             raise ValueError("Start value not in range")
+        elif end not in range(1, len(self.lines)+1):
+            raise ValueError("End value not in range")
         else:
             return "\n\n".join(self.lines[start-1:end])
 
